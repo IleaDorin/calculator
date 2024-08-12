@@ -34,10 +34,10 @@ function appendNumber(num) {
 }
 
 function setOperation(oper) {
-    if(op.left === '') {
+    if (op.left === '') {
         return;
     }
-    if(op.right !== '') {
+    if (op.right !== '') {
         calculate();
     }
     operator = oper;
@@ -46,7 +46,7 @@ function setOperation(oper) {
 }
 
 function calculate() {
-    if(op.right === '' || op.left === '') {
+    if (op.right === '' || op.left === '') {
         return;
     }
     let left = parseFloat(op.left);
@@ -62,7 +62,7 @@ function calculate() {
             result = left * right;
             break;
         case '/':
-            if(right === 0) {
+            if (right === 0) {
                 display.textContent = 'illegal operation, you go yo jail!';
                 return;
             }
@@ -73,6 +73,7 @@ function calculate() {
     acc = result;
     op.left = result;
     op.right = '';
+    clear = true;
 }
 
 
