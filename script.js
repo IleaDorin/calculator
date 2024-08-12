@@ -69,6 +69,9 @@ function calculate() {
             result = left / right;
             break;
     }
+    // round to 2 decimal places
+    result = Math.round(result * 1000) / 1000;
+    
     display.textContent = result;
     acc = result;
     op.left = result;
